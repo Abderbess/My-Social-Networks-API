@@ -2,6 +2,10 @@
 workspace:
   id: e1cb5df4-058d-47fe-b2dd-2be1c2054779
 
+cloudResources:
+  collections:
+    ../postman/collections/My Social Networks API Copy: c2003133-b1c1-445a-a0ec-ee175c289c09
+
 # All resources in the `postman/` folder are automatically registered in Local View.
 # Point to additional files outside the `postman/` folder to register them individually. Example:
 #localResources:
