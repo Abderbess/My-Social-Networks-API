@@ -3,13 +3,13 @@
 API REST du TP **My Social Networks** : refonte des API de gestion d'événements et de groupes d'un réseau social.
 Développée avec **Node.js**, **Express 5** et **SQLite** (module natif `node:sqlite`, aucune autre dépendance).
 
-## 📄 Documentation Postman
+##  Documentation Postman
 
 - **Documentation publiée : <https://documenter.getpostman.com/view/26750234/2sBYHbrbbp>**
 Chaque requête documente l'URL du service, l'explication fonctionnelle, les données envoyées, les données retournées et les erreurs possibles, avec des exemples de réponses réelles (succès et erreurs métier).
 La variable `{{baseUrl}}` vaut `http://localhost:3000/api/v1`.
 
-## 🚀 Installation et lancement
+##  Installation et lancement
 
 Prérequis : **Node.js 22.5 ou plus récent** (pour `node:sqlite`).
 
@@ -21,7 +21,7 @@ npm test           # tests de bout en bout sur une base temporaire
 
 La base `data.sqlite` est créée automatiquement au premier lancement (`db.js`). Les nouvelles tables sont ajoutées à une base existante sans perte de données.
 
-## 🗂️ Structure
+##  Structure
 
 ```
 server.js            point d'entrée, branchement des routes, gestion des erreurs
@@ -33,12 +33,12 @@ postman/             collection Postman (format YAML synchronisé)
 docs/                export JSON de la collection
 ```
 
-## 👤 Utilisateur qui fait l'action
+##  Utilisateur qui fait l'action
 
 L'API n'a pas d'authentification (hors du périmètre du TP). L'utilisateur qui agit est passé explicitement :
 `created_by`, `author_id`, `user_id`, `driver_id` ou `added_by` dans le body, et `?user_id=` en paramètre de requête pour les lectures (contenus privés ou secrets) et les suppressions.
 
-## 🔗 Endpoints
+##  Endpoints
 
 Préfixe : `/api/v1`
 
@@ -63,7 +63,7 @@ Préfixe : `/api/v1`
 | **Shopping list** | `POST /shopping-items` · `GET /shopping-items?event_id=` · `GET /shopping-items/:id` · `PATCH /shopping-items/:id` · `DELETE /shopping-items/:id` |
 | **Covoiturage** *(bonus)* | `POST /carpools` · `GET /carpools?event_id=` · `GET /carpools/:id` · `PATCH /carpools/:id` · `DELETE /carpools/:id` · `POST /carpools/:id/passengers` · `DELETE /carpools/:id/passengers/:userId` |
 
-## ✅ Règles du cahier des charges
+##  Règles du cahier des charges
 
 | Règle | Où / comment |
 |---|---|
@@ -87,7 +87,7 @@ Préfixe : `/api/v1`
 | Shopping list : chaque chose apportée est unique par événement | `UNIQUE (event_id, name COLLATE NOCASE)` → 409 |
 | Covoiturage : places limitées, temps maximum d'écart | `seats`, `max_detour_minutes`, places restantes calculées |
 
-## 🧪 Tests
+##  Tests
 
 `npm test` lance 10 scénarios de bout en bout, un par partie du cahier des charges, sur une base SQLite temporaire (la base `data.sqlite` n'est pas modifiée).
 
