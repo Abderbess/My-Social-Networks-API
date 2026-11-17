@@ -1,0 +1,17 @@
+$kind: http-request
+description: |-
+  ### Explication fonctionnelle
+
+  Retourne un utilisateur à partir de son identifiant (dans l'URL).
+
+  ### Données retournées
+
+  L'utilisateur : id, email, first_name, last_name, avatar_url, bio, created_at. Code 200.
+
+  ### Erreurs
+
+  404 : utilisateur introuvable.
+url: "{{baseUrl}}/users/4"
+method: GET
+examples: .resources/Lire un utilisateur.resources/examples
+order: 3000

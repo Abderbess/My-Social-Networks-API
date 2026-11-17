@@ -1,0 +1,23 @@
+$kind: http-request
+name: Lister / rechercher les utilisateurs
+description: |-
+  ### Explication fonctionnelle
+
+  Liste les utilisateurs. Le paramètre optionnel q permet de rechercher sur le prénom, le nom ou l'email.
+
+  ### Données retournées
+
+  Un tableau d'utilisateurs : id, email, first_name, last_name, avatar_url, bio, created_at. Code 200.
+url: "{{baseUrl}}/users?q=carl"
+method: GET
+queryParams:
+  - key: q
+    value: carl
+    disabled: false
+    description: Recherche sur prénom, nom ou email
+  - key: ""
+    value: null
+    disabled: true
+    description: ""
+examples: .resources/Lister - rechercher les utilisateurs.resources/examples
+order: 2000

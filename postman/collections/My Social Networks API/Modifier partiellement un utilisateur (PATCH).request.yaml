@@ -1,0 +1,32 @@
+$kind: http-request
+description: |-
+  ### Explication fonctionnelle
+
+  Modifie uniquement les champs envoyés d'un utilisateur. Les autres champs ne changent pas.
+
+  ### Données envoyées (JSON)
+
+  Un ou plusieurs champs parmi : email, first_name, last_name, avatar_url, bio.
+
+  ### Données retournées
+
+  L'utilisateur mis à jour. Code 200.
+
+  ### Erreurs
+
+  - 400 : aucun champ à modifier
+      
+  - 404 : utilisateur introuvable
+      
+  - 409 : email déjà utilisé par un autre utilisateur
+url: "{{baseUrl}}/users/4"
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \  \"bio\": \"Je cours le dimanche\"\r
+
+    }"
+examples: .resources/Modifier partiellement un utilisateur (PATCH).resources/examples
+order: 2000

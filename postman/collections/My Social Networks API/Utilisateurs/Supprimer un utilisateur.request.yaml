@@ -1,0 +1,22 @@
+$kind: http-request
+description: |-
+  ## Explication fonctionnelle
+
+  Supprime définitivement un utilisateur à partir de son identifiant. Les données qui lui sont rattachées (par exemple ses participations aux événements) sont supprimées en cascade.
+
+  ## Données envoyées
+
+  Aucun body. L'identifiant de l'utilisateur est passé dans l'URL : /users/{id}
+
+  ## Données retournées
+
+  - 204 No Content : l'utilisateur a été supprimé, la réponse n'a pas de contenu.
+      
+
+  ## Erreurs
+
+  - 404 Not Found : aucun utilisateur n'existe avec cet identifiant (par exemple s'il a déjà été supprimé).
+url: "{{baseUrl}}/users/5"
+method: DELETE
+examples: .resources/Supprimer un utilisateur.resources/examples
+order: 5000

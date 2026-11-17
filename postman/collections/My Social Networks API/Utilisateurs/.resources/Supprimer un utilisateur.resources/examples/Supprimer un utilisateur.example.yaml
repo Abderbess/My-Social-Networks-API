@@ -1,0 +1,16 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users/5"
+  method: DELETE
+response:
+  statusCode: 204
+  statusText: No Content
+  headers:
+    X-Powered-By: Express
+    Date: Tue, 17 Nov 2026 14:26:31 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+  body:
+    type: text
+    content: ""
+order: 1000

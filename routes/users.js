@@ -46,6 +46,7 @@ router.get('/:id', (req, res) => {
   res.json(user);
 });
 
+
 // Remplacer complètement (PUT)
 router.put('/:id', (req, res) => {
   const { email, first_name, last_name, avatar_url, bio } = req.body;

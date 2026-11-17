@@ -1,0 +1,28 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users/4"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "139"
+    ETag: W/"8b-EIZcWVTy/a+lyrQHj6rafYaW7Tk"
+    Date: Tue, 17 Nov 2026 14:13:46 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+  body:
+    type: json
+    content: |-
+      {
+        "id": 4,
+        "email": "carl@example.com",
+        "first_name": "Carl",
+        "last_name": "Petit",
+        "avatar_url": null,
+        "bio": null,
+        "created_at": "2026-11-17 14:05:24"
+      }
+order: 1000

@@ -1,0 +1,40 @@
+$kind: http-example
+name: Lister / rechercher les utilisateurs
+request:
+  url: "{{baseUrl}}/users?q=carl"
+  method: GET
+  queryParams:
+    - key: q
+      value: carl
+      disabled: false
+      description: Recherche sur prénom, nom ou email
+    - key: ""
+      value: null
+      disabled: true
+      description: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "141"
+    ETag: W/"8d-YVpH9iVQACr1mRvbhO5+8HDGHjs"
+    Date: Tue, 17 Nov 2026 14:11:19 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": 4,
+          "email": "carl@example.com",
+          "first_name": "Carl",
+          "last_name": "Petit",
+          "avatar_url": null,
+          "bio": null,
+          "created_at": "2026-11-17 14:05:24"
+        }
+      ]
+order: 1000
